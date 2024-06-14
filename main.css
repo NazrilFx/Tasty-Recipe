@@ -1,0 +1,148 @@
+:root {
+    --purpleStandar: rgb(70, 35, 167);
+}
+
+* {
+    font-family: "Poppins";
+    margin: 0px;
+    padding: 0px;
+}
+
+button, a {
+    cursor: pointer;
+}
+
+nav {
+    width: 100%;
+    height: 45px;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+}
+
+nav h3 {
+    margin-left: 10px;
+}
+
+.search-container {
+    width: 60%;
+    margin-left: auto;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search {
+    width: 75%;
+    display: flex;
+    align-items: center;
+}
+
+.search i {
+    width: 10%;
+    text-align: right;
+}
+
+.search input {
+    border-radius: 7px;
+    padding: 1px 5px;
+    width: 80%;
+    margin-left: 5px;
+    border: 1px solid rgb(0, 0, 0, 0.5);
+}
+
+.sign-up {
+    display: flex;
+    align-items: center;
+}
+
+.sign-up * {
+    color: var(--purpleStandar);
+}
+
+.sign-up a {
+    margin-left: 5px;
+    border: none;
+    background-color: white;
+    text-decoration: none;
+}
+
+main h1, main p {
+    text-align: center;
+}
+
+.recipes-container {
+    width: 95%;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 15px;
+}
+
+.recipes {
+    height: 350px;
+    border-radius: 10px;
+    border: 1px solid rgb(0, 0, 0, 0.3);
+}
+
+.food-type, .recipes h3 {
+    margin: 0px 10px;
+}
+
+.recipe-by {
+    margin-left: 10px;
+}
+
+.like-recipe, .unlike-recipe {
+    position: absolute;
+    color: #bbbbbb;
+    background-color: white;
+    border-radius: 100%;
+    font-size: 20px;
+    padding: 3px 8px;
+    border: none;
+    margin: 15px;
+}
+
+.unlike-recipe {
+    color: lightcoral;
+    background-color: rgb(243, 215, 215);
+}
+
+.imgRecipes {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+footer {
+    width: 100%;
+    height: 300px;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+footer div {
+    padding: 25px;
+}
+
+.socmed p {
+    margin-top: 50px;
+}
+
+.socmed div * {
+    font-size: 25px;
+    margin-right: 5px;
+    color: var(--purpleStandar);
+}
+
+.socmed div {
+    padding: 0px;
+    margin-top: 10px;
+}

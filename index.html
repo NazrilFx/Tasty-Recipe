@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasty Recipe</title>
+    <script src="https://kit.fontawesome.com/d4b0adbd70.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+</head>
+<body>
+    
+<div id="global">
+
+    <header>
+        <nav>
+            <h3>Tasty Recipe</h3>
+            <div class="search-container">
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search Recipe">
+                </div>
+                <div class="sign-up">
+                    <i class="fa-solid fa-user"></i>
+                    <a href="sign_up.html"><b>Sign Up</b></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>All Recipe</h1>
+        <p>Find and share everyday cooking inspiration on Allrecipes, cooks, videos, and how-tos based on the food youe love and the friend you follow</p>
+        <div class="recipes-container">
+            <div v-for="recipe in recipes" class="recipes">
+                <button @click="unlikeRecipe(recipe.name)" v-if="recipe.like === true" id="unlike-recipe" class="unlike-recipe"><i class="fa-solid fa-heart"></i></button>
+                <button @click="likeRecipe(recipe.name)" v-else-if="recipe.like === false" id="like-recipe" class="like-recipe"><i class="fa-solid fa-heart"></i></button>
+                <img class="imgRecipes" :src="recipe.img" alt="">
+                <span class="food-type">{{ recipe.foodType }}</span>
+                <h3>{{ recipe.name }}</h3>
+                <span class="recipe-by">Recipe By {{ recipe.recipeBy }}</span>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="socmed">
+            <h3>Tasty Recipe</h3>
+            <p>Follow us on</p>
+            <div class="socmed-icon">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-twitter"></i>
+            </div>
+        </div>
+        <div class="recipe-news">
+            <h3>Get Tasty Recipe News Later</h3>
+            <p>Email Address</p>
+            <input type="email" placeholder="Your Email Address">
+            <button>Subscribe</button>
+        </div>
+    </footer>
+
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>
